@@ -16,19 +16,19 @@ let container = document.getElementsByClassName("container");
 let paragraph = document.querySelector("p");
 paragraph.innerHTML = "List of Fruits";
     
-const fruits = ["Banana", "Orange", "Apple", "Mango", "Cherry"];
+const fruits = ["Banana", "Orange", "Apple", "Mango", "Cherry", "Tomato"];
 
-const listContainer = document.getElementById("fruitList");
-const createElements = () => {
-  fruits.map((fruits, i) => {
+const listContainer = document.getElementById("fruitsList");
+  addFruitElements = (fruits) => {
+  fruits.map((fruit, i) => {
     
       let fruitElement = document.createElement("li");
-      fruitElement.innerHTML = `${i+1}.  ${fruits}`;
+      fruitElement.innerHTML = `${i+1}.  ${fruit}`;
       listContainer.appendChild(fruitElement);
       
   })
 }
-createElements();
+addFruitElements(fruits);
 
    
 
